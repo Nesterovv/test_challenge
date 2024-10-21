@@ -1,13 +1,13 @@
-import { BrokenImagesPage } from '../POM/BrokenImagesPage';
+import { BrokenImagesPage } from "../POM/BrokenImagesPage";
 
-describe('Broken Images Test', () => {
+describe("Broken Images Test", () => {
   const brokenImagesPage = new BrokenImagesPage();
 
   beforeEach(() => {
     brokenImagesPage.navigate();
   });
 
-  it('should verify that all images are broken', () => {
+  it("should verify that all images are broken", () => {
     brokenImagesPage.verifyImagesBroken();
   });
 });

@@ -1,4 +1,7 @@
 import { defineConfig } from "cypress";
+import * as dotenv from 'dotenv';
+
+dotenv.config();
 
 export default defineConfig({
   e2e: {
@@ -24,6 +27,12 @@ export default defineConfig({
       runMode: 2, // Retry twice in `cypress run`
       openMode: 0, // No retries in `cypress open`
     },
+  },
+  env: {
+    githubUsername: process.env.GITHUB_USERNAME,
+    githubPassword: process.env.GITHUB_PASSWORD,
+    googleEmail: process.env.GOOGLE_EMAIL,
+    googlePassword: process.env.GOOGLE_PASSWORD,
   },
 
   video: false, // Disable video recording
