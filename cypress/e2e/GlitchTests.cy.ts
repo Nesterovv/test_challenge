@@ -1,8 +1,6 @@
-/// <reference types="cypress" />
+import { GlitchLoginPage } from "../POM/GlitchLoginPage";
 
-import { GlitchLoginPage } from '../POM/GlitchLoginPage';
-
-describe('Glitch Support Login Test using POM', () => {
+describe("Glitch Support Login Test using POM", () => {
   const glitchLoginPage = new GlitchLoginPage();
 
   beforeEach(() => {
@@ -10,7 +8,7 @@ describe('Glitch Support Login Test using POM', () => {
     glitchLoginPage.interceptCheckUsernameAPI();
   });
 
-  it('should log in via GitHub successfully', () => {
+  it("should log in via GitHub successfully", () => {
     glitchLoginPage.clickLoginButton();
     glitchLoginPage.clickGithubLoginButton();
 
